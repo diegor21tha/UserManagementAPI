@@ -1,0 +1,45 @@
+GET http://localhost:5261/
+
+###
+GET http://localhost:5261/users/
+
+###
+curl -i -H "Authorization: Bearer secret-token" http://localhost:5261/users/
+
+###
+GET http://localhost:5261/users/1
+
+###
+POST http://localhost:5261/users
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "test@email.com"
+}
+
+###
+PUT http://localhost:5261/users/1
+Content-Type: application/json 
+
+{
+    "name": "John Doe Updated",
+    "email": "test@email.com"
+}
+
+###
+DELETE http://localhost:5261/users/1
+
+###
+GET http://localhost:5261/users?page=1&pageSize=2
+###
+GET http://localhost:5261/users?q=John&page=1&pageSize=2
+####
+GET http://localhost:5261/users?q=John&page=1&pageSize=2
+
+###
+GET http://localhost:5261/counts
+
+###
+GET http://localhost:5261/throw
+Accept: application/json
